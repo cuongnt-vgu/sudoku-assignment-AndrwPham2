@@ -78,6 +78,14 @@ void unset_candidate(Cell *cell, int value)
     cell->candidates[value - 1] = 0;
     cell->num_candidates -= 1;
 }
+void unset_candidate1(Cell *cell, int value)
+{
+    if (cell->candidates[value - 1] == 1)
+    {
+        cell->candidates[value - 1] = 0;
+        cell->num_candidates -= 1;
+    }
+}
 
 bool is_candidate(Cell *cell, int value)
 {
@@ -119,7 +127,10 @@ int *get_candidates(Cell *cell)
     }
     return out;
 }
-
+int *get_candidate(Cell *cell)
+{
+    return cell-> candidates;
+}
 void load_sudoku(SudokuBoard *p_board, char *textData)
 {
     for (int i = 0; i < BOARD_SIZE * BOARD_SIZE; i++)

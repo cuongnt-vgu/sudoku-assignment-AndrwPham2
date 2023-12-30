@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "sudoku.h": "c",
+        "naked_triples.h": "c",
+        "stdio.h": "c",
+        "hidden_pairs.h": "c"
+    }
+}
